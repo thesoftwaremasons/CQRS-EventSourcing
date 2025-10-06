@@ -12,7 +12,7 @@ namespace CQRS.Core.Domain
         protected Guid _id;
         private readonly List<BaseEvent> _changes = new();
         public Guid Id => _id;
-        public int Version { get; internal set; } = -1;
+        public int Version { get; set; } = -1;
 
         public IEnumerable<BaseEvent> GetUnCommitedChanges()
         {
